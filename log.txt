@@ -394,3 +394,73 @@ Sun Jan 21 16:48:53 2024 - Synchronization started.
 Sun Jan 21 16:48:53 2024 - Synchronization complete.
 Sun Jan 21 16:49:03 2024 - Synchronization started.
 Sun Jan 21 16:49:03 2024 - Synchronization complete.
+Sun Jan 21 19:33:51 2024 - Synchronization parameters: --source_folder Source --replica_folder Replica --log_file log.txt --time_interval 10
+Sun Jan 21 19:33:51 2024 - Synchronization started.
+Sun Jan 21 19:33:51 2024 - Created directory: Replica
+Sun Jan 21 19:33:51 2024 - Created: TestFile1.txt
+Sun Jan 21 19:33:51 2024 - Created directory: Replica\TestDir
+Sun Jan 21 19:33:51 2024 - Created: TestDir\TestFile2.txt
+Sun Jan 21 19:33:51 2024 - Created directory: TestDir\EmptyDir
+Sun Jan 21 19:33:51 2024 - Synchronization complete.
+Sun Jan 21 19:34:01 2024 - Synchronization started.
+Sun Jan 21 19:34:01 2024 - Synchronization complete.
+Sun Jan 21 19:34:11 2024 - Synchronization started.
+Sun Jan 21 19:34:11 2024 - Synchronization complete.
+Sun Jan 21 19:34:21 2024 - Synchronization started.
+Sun Jan 21 19:34:21 2024 - Created directory: NewEmptyDir
+Sun Jan 21 19:34:21 2024 - Synchronization complete.
+Sun Jan 21 19:34:31 2024 - Synchronization started.
+Sun Jan 21 19:34:31 2024 - Synchronization complete.
+Sun Jan 21 19:34:41 2024 - Synchronization started.
+Sun Jan 21 19:34:41 2024 - Synchronization complete.
+Sun Jan 21 19:34:51 2024 - Synchronization started.
+Sun Jan 21 19:34:51 2024 - Created: NewEmptyDir\FileInDirectory
+Sun Jan 21 19:34:51 2024 - Synchronization complete.
+Sun Jan 21 19:35:01 2024 - Synchronization started.
+Sun Jan 21 19:35:01 2024 - Synchronization complete.
+Sun Jan 21 19:35:11 2024 - Synchronization started.
+Sun Jan 21 19:35:11 2024 - Created directory: NewEmptyDir\Dir
+Sun Jan 21 19:35:11 2024 - Synchronization complete.
+Sun Jan 21 19:35:21 2024 - Synchronization started.
+Sun Jan 21 19:35:21 2024 - Synchronization complete.
+Sun Jan 21 19:35:31 2024 - Synchronization started.
+Sun Jan 21 19:35:31 2024 - Synchronization complete.
+Sun Jan 21 19:35:41 2024 - Synchronization started.
+Sun Jan 21 19:35:41 2024 - Synchronization complete.
+Sun Jan 21 19:35:51 2024 - Synchronization started.
+Sun Jan 21 19:35:51 2024 - Synchronization complete.
+Sun Jan 21 19:36:01 2024 - Synchronization started.
+Sun Jan 21 19:36:01 2024 - Synchronization complete.
+Sun Jan 21 19:36:11 2024 - Synchronization started.
+Sun Jan 21 19:36:11 2024 - Deleted directory: NewEmptyDir
+Deleted content: File: FileInDirectory
+Directory: Dir
+
+Sun Jan 21 19:36:11 2024 - Synchronization complete.
+Sun Jan 21 19:36:21 2024 - Synchronization started.
+Sun Jan 21 19:36:21 2024 - Synchronization complete.
+Sun Jan 21 19:36:31 2024 - Synchronization started.
+Sun Jan 21 19:36:31 2024 - Synchronization complete.
+Sun Jan 21 19:36:41 2024 - Synchronization started.
+Sun Jan 21 19:36:41 2024 - Created directory: DIr
+Sun Jan 21 19:36:41 2024 - Synchronization complete.
+Sun Jan 21 19:36:51 2024 - Synchronization started.
+Sun Jan 21 19:36:51 2024 - Created directory: DIr\Dir2
+Sun Jan 21 19:36:51 2024 - Synchronization complete.
+Sun Jan 21 19:37:01 2024 - Synchronization started.
+Sun Jan 21 19:37:01 2024 - Created directory: DIr\Dir2\Dir3
+Sun Jan 21 19:37:01 2024 - Created directory: DIr\Dir2\Dir4
+Sun Jan 21 19:37:01 2024 - Synchronization complete.
+Sun Jan 21 19:37:11 2024 - Synchronization started.
+Sun Jan 21 19:37:12 2024 - Created: DIr\Dir2\File
+Sun Jan 21 19:37:12 2024 - Synchronization complete.
+Sun Jan 21 19:37:22 2024 - Synchronization started.
+Sun Jan 21 19:37:22 2024 - Deleted directory: DIr
+Deleted content: Directory: Dir2
+File: Dir2\File
+Directory: Dir2\Dir3
+Directory: Dir2\Dir4
+
+Sun Jan 21 19:37:22 2024 - Synchronization complete.
+Sun Jan 21 19:37:32 2024 - Synchronization started.
+Sun Jan 21 19:37:32 2024 - Synchronization complete.

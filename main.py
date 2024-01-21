@@ -89,10 +89,19 @@ class SyncThread(threading.Thread):
                     self.log(f"Created directory: {replica_dir}")
 
                 # Check if replica file exists and compare content hashes
-                if os.path.exists(replica_path) and not compare_files(source_path, replica_path):
-                    shutil.copy2(source_path, replica_path)
-                    self.log(f"Modified: {os.path.relpath(source_path, self.source_folder)}")
-                elif not os.path.exists(replica_path):
+                if os.path.exists(replica_path):
+                    source_size = os.path.getsize(source_path)
+                    source_mtime = os.path.getmtime(source_path)
+                    replica_size = os.path.getsize(replica_path)
+                    replica_mtime = os.path.getmtime(replica_path)
+
+                    if (source_size, source_mtime) != (replica_size, replica_mtime):
+                        shutil.copy2(source_path, replica_path)
+                        self.log(f"Modified: {os.path.relpath(source_path, self.source_folder)}")
+                    elif not compare_files(source_path, replica_path):
+                        shutil.copy2(source_path, replica_path)
+                        self.log(f"Modified: {os.path.relpath(source_path, self.source_folder)}")
+                else:
                     shutil.copy2(source_path, replica_path)
                     self.log(f"Created: {os.path.relpath(source_path, self.source_folder)}")
 

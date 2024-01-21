@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1abd1546-4888-4a43-a22d-fd7c885d359e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DirToSync/TestDir/TestDir2/TestDir3/TestFile3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DirToSync/TestDir/TestFile2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Source/TestDir/TestFile2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SyncDir/TestDir/TestDir2/TestDir3/TestFile3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Source/TestFile1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SyncDir/TestDir/TestFile2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log_file.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log_file2.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sync.py" beforeDir="false" afterPath="$PROJECT_DIR$/sync.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sync.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +23,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
