@@ -41,10 +41,10 @@ python main.py --source <SOURCE_FOLDER> --replica <REPLICA_FOLDER> --log_file <L
 
 ## Example
 
-To synchronize a folder named "source_folder" to "replica_folder" with a time interval of 120 seconds and log the synchronization process to "sync_log.txt", run the following command:
+To synchronize a folder named "Source" to "Replica" with a time interval of 10 seconds and log the synchronization process to "log.txt", run the following command:
 
 ```
-python main.py --source source_folder --replica replica_folder --log-file sync_log.txt --time-interval 120
+python main.py --source Source --replica Replica --log-file log.txt --time-interval 10
 ```
 
 ## Notes
