@@ -6,7 +6,7 @@ This script carries out a one-way synchronization of two folders to keep the rep
 ## Requirements
 
 * Python 3.x
-* Libraries: argparse, hashlib, os, time, shutil, threading, keyboard
+* Libraries: argparse, hashlib, os, sys, re, time, shutil, threading, keyboard
 ```
 pip install -r requirements.txt
 ```
@@ -44,7 +44,7 @@ python main.py --source <SOURCE_FOLDER> --replica <REPLICA_FOLDER> --log_file <L
 To synchronize a folder named "Source" to "Replica" with a time interval of 10 seconds and log the synchronization process to "log.txt", run the following command:
 
 ```
-python main.py --source Source --replica Replica --log-file log.txt --time-interval 10
+python main.py --source_folder Source --replica_folder Replica --log_file log.txt --time_interval 10
 ```
 
 ## Notes

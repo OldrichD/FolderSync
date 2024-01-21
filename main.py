@@ -1,10 +1,44 @@
 import argparse
 import os
+import sys
+import re
 import time
 import shutil
 import hashlib
 import threading
 import keyboard
+
+
+def validate_input_parameters(source_folder, replica_folder, log_file, time_interval):
+    """Validate the input parameters for the folder synchronization program."""
+    # Check for the existence and validity of the specified source folder.
+    if not os.path.exists(source_folder) or not os.path.isdir(source_folder):
+        print(f"Error: The specified source folder '{source_folder}' does not exist or is not a directory.")
+        sys.exit(1)
+
+    # Ensure that the replica folder has a different name than the source folder.
+    if replica_folder == source_folder:
+        print("Error: Replica folder should have a different name than the source folder.")
+        sys.exit(1)
+
+    # Validate the replica folder name using a regular expression.
+    if not re.match(r'^[\w\-. /]+$', replica_folder):
+        print(
+            f"Error: The specified replica folder name '{replica_folder}' is not valid. It should only contain "
+            f"letters, numbers, underscores, hyphens, dots, slashes, and spaces.")
+        sys.exit(1)
+
+    # Check the length and format of the log file name.
+    if len(log_file) > 255 or not re.match(r'^[\w\-.]+$', log_file):
+        print(
+            "Error: Invalid log file name. It should be 255 characters or less and contain only letters, numbers, "
+            "underscores, hyphens, and dots.")
+        sys.exit(1)
+
+    # Ensure that the synchronization interval is a positive integer.
+    if time_interval <= 0:
+        print("Error: Synchronization interval should be a positive integer.")
+        sys.exit(1)
 
 
 def compare_files(file1, file2):
@@ -155,6 +189,9 @@ if __name__ == "__main__":
     parser.add_argument('--time_interval', type=int, default=10,
                         help='Synchronization execution time interval in seconds.')
     args = parser.parse_args()
+
+    # Validate input parameters
+    validate_input_parameters(args.source_folder, args.replica_folder, args.log_file, args.time_interval)
 
     # Create and start synchronization thread
     sync_thread = SyncThread(args.source_folder, args.replica_folder, args.log_file, args.time_interval)
