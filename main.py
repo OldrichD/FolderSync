@@ -84,9 +84,9 @@ class SyncThread(threading.Thread):
 
         while not self.stop_event.is_set():
             self.sync_folders()
-            remaining_time = self.interval
 
             # Sleep and decrement the remaining time until the next synchronization
+            remaining_time = self.interval
             while not self.stop_event.is_set() and remaining_time > 0:
                 time.sleep(1)
                 remaining_time -= 1
@@ -98,15 +98,20 @@ class SyncThread(threading.Thread):
 
     def sync_folders(self):
         """Synchronize files and directories."""
-        # Log synchronization start
-        self.log("Synchronization started.")
+        try:
+            # Log synchronization start
+            self.log("Synchronization started.")
 
-        # Perform file and directory synchronization
-        self.sync_files()
-        self.sync_directories()
+            # Perform file and directory synchronization
+            self.sync_files()
+            self.sync_directories()
 
-        # Log synchronization complete
-        self.log("Synchronization complete.")
+            # Log synchronization complete
+            self.log("Synchronization complete.")
+        except Exception as e:
+            # Log and print the error
+            error_message = f"Error during synchronization: {str(e)}"
+            self.log(error_message)
 
     def sync_files(self):
         """Synchronize files in the source and replica folders."""
