@@ -1,7 +1,7 @@
 # Folder Sync Project
 
 #### This is a program that performs one-way synchronization of two folders.
-This program facilitates one-way synchronization of two folders, aiming to keep a replica folder updated with the content of a source folder. The synchronization includes various operations such as file updates, copying, and deletions (where renaming is treated as separate delete and copy operations). The progress of synchronization, including input parameters, start, performed changes, and completion, is logged to both the console and a specified log file.
+This script carries out a one-way synchronization of two folders to keep the replica folder updated with the contents of the source folder. The synchronization includes the following operations: file update, copy, and delete (with renaming being treated as separate delete and copy operations). Subfolders are also included in the synchronization, including empty ones. The synchronization progress (start, changes made, finish) and input parameters are recorded in a file and output to the console.
 
 ## Requirements
 
